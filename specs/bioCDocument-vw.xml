@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="BioCDocument" type="Data">
+	<primitives>
+		<primitive name="BioCDocument">
+			<classes>
+				<class name="BioCDocument"/>
+			</classes>
+			<pvLinks>
+				<pvLink c1="BioCDocument" role="passages" pv2="BioCPassage" c2="BioCPassage"/>
+			</pvLinks>
+		</primitive>
+		<primitive name="BioCPassage" >
+			<classes>
+				<class name="BioCPassage"/>
+			</classes>
+			<pvLinks>
+				<pvLink c1="BioCPassage" role="annotations" pv2="BioCAnnotation" c2="BioCAnnotation"/>
+			</pvLinks>
+		</primitive>
+		<primitive name="BioCAnnotation" nullable="true">
+			<classes>
+				<class name="BioCAnnotation"/>
+			</classes>
+			<pvLinks>
+				<pvLink c1="BioCAnnotation" role="locations" pv2="BioCLocation" c2="BioCLocation"/>
+			</pvLinks>
+		</primitive>
+		<primitive name="BioCLocation" nullable="true">
+			<classes>
+				<class name="BioCLocation"/>
+			</classes>
+		</primitive>	
+	</primitives>
+ 	<viewLinks>
+	</viewLinks> 
+	<vpdmfLabel format="$1$" />
+	<indexElements>
+		<indexElement pos="1" p="BioCDocument" c="BioCDocument" a="id" />
+	</indexElements>
+</view>
